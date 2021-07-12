@@ -1,0 +1,429 @@
+:root {
+    --dark-blue: #B9C9C7;
+    --light-pink: #F1DEC8;
+    --light-black: #444440;
+    --white: #FFFFFF;
+    --light-green: #F0FFE4;
+    --light-yellow: #F5F5EF;
+    --deep-green: #C4D6B7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--light-black);
+}
+
+@font-face {
+    font-family: ptsans;
+    src: url(assets/fonts/PTSans/PTSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: ptsansbold;
+    src: url(assets/fonts/PTSans/PTSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: ptserif;
+    src: url(assets/fonts/PTSerif/PTSerif-Regular.ttf);
+}
+
+@font-face {
+    font-family: ptserifitalic;
+    src: url(assets/fonts/PTSerif/PTSerif-Italic.ttf);
+}
+
+.container-background {
+    background-image: url('/assets/vector/cellphone/Vector1.svg'), url('/assets/vector/cellphone/Vector2.svg'), url('/assets/vector/cellphone/Vector4.svg'), url('/assets/vector/cellphone/Vector3.svg');
+    background-size: cover;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/**GENERAL**/
+
+.h1 {
+    font-family: ptsans;
+    text-align: center;
+}
+
+.h2 {
+    text-align: center;
+    color: var(--light-black);
+}
+
+.p {
+    font-family: ptsans;
+    font-size: medium;
+    text-align: left;
+    color: var(--light-black);
+}
+
+.ul {
+    list-style: none;
+    display: grid;
+}
+
+
+/**** HEADER *****/
+
+header {
+    background-color: var(--dark-blue);
+    height: 15em;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.header__base {
+    background-color: var(--white);
+    height: 10em;
+    width: 20em;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.header__base-black {
+    border: var(--light-black) solid;
+    height: 8em;
+    width: 18em;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.header--h1 {
+    margin-top: 4px;
+    font-weight: 10px;
+}
+
+.header--h2 {
+    font-family: ptserifitalic;
+    margin-top: 8px;
+}
+
+.first-grid-container {
+    padding: 2%;
+}
+
+
+/****PERFIL****/
+
+.perfil {
+    font-family: ptsans;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    color: var(--light-black);
+}
+
+.perfil--h2 {
+    font-family: ptsans;
+    font-size: 25px;
+}
+
+.perfil--p {
+    margin: auto 8%;
+    margin-top: 5%;
+}
+
+.perfil__article {
+    height: 150%;
+}
+
+
+/****IMAGEN****/
+
+.profile-pic {
+    height: 200px;
+    width: auto;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.profile-pic__img {
+    width: 150px;
+    border-radius: 100%;
+    margin: auto;
+    display: block;
+}
+
+
+/****SOCIAL****/
+
+.social {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    column-gap: 1%;
+    width: 80%;
+    margin-left: 10%;
+    justify-content: center;
+    align-content: center;
+}
+
+.ul__li {
+    font-family: ptsansbold;
+    font-size: small;
+}
+
+.ul__social-icons {
+    width: 15%;
+    height: auto;
+    margin-bottom: 13%;
+    font-size: 15px;
+}
+
+.ul__social {
+    margin-left: 5%;
+    margin-bottom: 4%;
+}
+
+.ul__social-a:hover,
+.ul__icons-a:hover {
+    color: var(--dark-blue);
+}
+
+
+/****EDUCACION****/
+
+.border-black {
+    border: var(--light-black) solid;
+    height: auto;
+    width: 75%;
+    text-align: center;
+    margin: 6% auto 6%;
+    font-family: ptsans;
+}
+
+.educacion--p {
+    margin: 10% 12%;
+}
+
+
+/****CONCIMIENTOS****/
+
+.border-pink {
+    border: var(--light-pink) solid;
+    background-color: var(--light-pink);
+    height: auto;
+    width: 75%;
+    text-align: center;
+    font-family: ptsans;
+    margin: 6% auto 6%;
+}
+
+.conocimientos,
+.habilidades {
+    text-align: center;
+}
+
+
+/***FORM***/
+
+.contacto__form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    margin-left: 15%;
+}
+
+.contacto--h1 {
+    margin-right: 5%;
+    margin-top: 5%;
+}
+
+.contacto__field:nth-child(2) {
+    height: 120px;
+}
+
+.contacto__label-text {
+    font-family: ptsans;
+}
+
+.contacto__text-message {
+    background-color: var(--dark-blue);
+    border: 0;
+}
+
+.contacto__field {
+    display: grid;
+    grid-column: span 2;
+    grid-template-columns: 30% 70%;
+    margin: 3%;
+}
+
+.contacto__text-message {
+    width: 75%;
+}
+
+.contacto__button {
+    height: 40px;
+    width: 150px;
+    justify-self: center;
+    align-self: center;
+    border-radius: 20px;
+    background-color: var(--light-pink);
+    border-color: var(--light-pink);
+    font-family: ptsans;
+    font-weight: bold;
+    border: 0;
+    margin-bottom: 25px;
+}
+
+
+/***ACTIVIDADES***/
+
+.actividades-list {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 80%;
+    margin-left: 10%;
+    font-family: ptsans;
+    color: var(--light-black);
+    letter-spacing: 2px;
+    font-size: 25px;
+}
+
+.footer {
+    height: 4em;
+    background-color: var(--light-pink);
+}
+
+
+/***DISEÑO PARA TABLETS***/
+
+@media (min-width:600px) {
+    .first-grid-container {
+        display: grid;
+        grid-template-columns: 25% 25% 25%;
+        align-content: center;
+        justify-content: center;
+        column-gap: 8%;
+    }
+    .third-grid-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .perfil--p {
+        margin: 10% auto auto 0;
+    }
+    .perfil {
+        margin-left: 15%;
+    }
+    .educacion--p {
+        margin-top: 10%;
+    }
+    .header__base {
+        width: 30em;
+    }
+    .header__base-black {
+        width: 28em;
+    }
+    .header--h1 {
+        font-weight: 500px;
+        letter-spacing: 10px;
+    }
+    .header--h2 {
+        letter-spacing: 5px;
+    }
+    .contacto__form {
+        margin-right: 150px;
+    }
+    .border-black {
+        width: 80%;
+        margin: 6% auto 6%;
+    }
+    .social {
+        grid-template-columns: 90% 20%;
+        grid-gap: 30%;
+        width: 80%;
+        margin-left: 10%;
+    }
+    .contacto__field {
+        grid-template-columns: 50% 150%;
+        margin: 5%;
+    }
+    .contacto__button {
+        height: 40px;
+        width: 150px;
+    }
+    .actividades-list {
+        margin-left: 20%;
+    }
+}
+
+
+/***DISEÑO PARA DESKTOP***/
+
+@media (min-width:900px) {
+    .container-background {
+        background-image: url('/assets/vector/desktop/Vector1.svg'), url('/assets/vector/desktop/Vector2.svg'), url('/assets/vector/desktop/Vector3.svg'), url('/assets/vector/desktop/Vector4.svg');
+    }
+    .first-grid-container {
+        display: grid;
+        grid-template-columns: 25% 25% 25%;
+        align-content: center;
+        justify-content: center;
+    }
+    .second-grid-container {
+        display: grid;
+        grid-template-columns: 25% 25% 25%;
+        justify-content: center;
+        margin-top: 3%;
+        column-gap: 3%;
+    }
+    .third-grid-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        justify-content: center;
+        align-content: center;
+    }
+    .perfil--p {
+        margin: 15% auto;
+    }
+    .perfil {
+        margin-left: 25%;
+    }
+    .social {
+        grid-template-columns: 90% 20%;
+        grid-gap: 40%;
+        width: 60%;
+        margin-left: 5%;
+    }
+    .educacion--p {
+        margin: 15% 0% 3% 10%;
+    }
+    .header__base {
+        width: 40em;
+    }
+    .header__base-black {
+        width: 38em;
+    }
+    .header--h1 {
+        font-weight: 500px;
+        letter-spacing: 10px;
+    }
+    .header--h2 {
+        letter-spacing: 5px;
+    }
+    .contacto--h1 {
+        margin-top: 0;
+    }
+    .contacto__field {
+        grid-template-columns: 30% 100%;
+        margin: 3%;
+    }
+    .actividades-list {
+        margin-left: 25%;
+    }
+}

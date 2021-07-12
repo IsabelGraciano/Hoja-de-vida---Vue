@@ -1,0 +1,68 @@
+{
+    "dictionary": {
+        "es-CO": {
+            "contact": "Contacto",
+            "name": "Nombre"
+        },
+        "en-US": {
+            "contact": "Contact",
+            "name": "name"
+        }
+    },
+
+    "info": {
+        "nombre": "ISABEL CRISTINA",
+        "ocupacion": "Estudiante de Ingeniería de Sistemas",
+        "perfil": "Estudiante de ingeniería de sistemas en la universidad EAFIT.Actualmente curso el octavo semestre y estoy realizando las prácticas profesionales en PlayVox.",
+        "contacto": {
+            "ubicacion": "MEDELLIN, ANTIOQUIA",
+            "correo": "ICGRACIANO@PLAYVOX.COM",
+            "github": "ISABELGRACIANO",
+            "celular": "304 652 29 63",
+            "twitter": "ISABELGRACIANOO",
+            "linkedin": "ISABEL CRISTINA GRACIANO"
+        },
+        "educacion": {
+            "colegio": "Bachillerato - Institución educativa Maria de los Ángeles Cano Márquez",
+            "universidad": "Ingeniería de sistemas - Universidad EAFIT. 2018-2022"
+        },
+        "conocimientos": [
+            { "item": "PYTHON" },
+            { "item": "JAVA" },
+            { "item": "PHP" },
+            { "item": "FLUTTER" }
+        ],
+        "habilidades": [
+            { "item": "TRABAJO EN EQUIPO" },
+            { "item": "COMPROMISO" },
+            { "item": "RESPONSABILIDAD" },
+            { "item": "HONESTIDAD" }
+        ],
+        "actividades": [
+            { "item": "Monitora de cálculo 1 en 2018-2" },
+            { "item": "Monitora logística 2021-1" },
+            { "item": "Integrante del semillero de investigación de innovación y emprendimiento" }
+        ],
+        "img": "./assets/img/03.jpg",
+        "urls": {
+            "github": "https://github.com/IsabelGraciano",
+            "celular": "tel:3046522963",
+            "twitter": "https://twitter.com/IsabelGracianoo",
+            "linkedin": "https://www.linkedin.com/in/isabel-cristina-graciano-vasquez",
+            "enviarForm": "https://formspree.io/f/mrgrlgbz"
+        }
+    },
+    "labels": {
+        "perfil": "PERFIL",
+        "educacion": "EDUCACIÓN",
+        "conocimientos": "CONOCIMIENTOS",
+        "habilidades": "HABILIDADES",
+        "actividades": "ACTIVIDADES",
+        "contacto": "CONTACTO",
+        "correo": "Correo",
+        "mensaje": "Mensaje",
+        "botones": {
+            "boton_contactar": "CONTACTAR"
+        }
+    }
+}

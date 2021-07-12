@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de vida desarrollador front end</title>
+    <meta name="descripcion" content="Este es un currículum de un practicante front end">
+    <meta name="keywords" content="curriculum, hoja de vida, front end dev, developer, html, css, javascript">
+    <meta name="author">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/png" href="assets/icons/favicon.png" />
+</head>
+
+<body class="container">
+    <div id="app">
+        <div class="container-background">
+            <header id="header">
+                <div class="header__base">
+                    <div class="header__base-black">
+                        <h1 class="h1 header--h1">{{ data.info.nombre }}</h1>
+                        <h2 class="h2 header--h2">{{ data.info.ocupacion }}</h2>
+                    </div>
+                </div>
+            </header>
+
+            <!--PRIMERAS 3 COLUMNAS PARTE-->
+            <div class="first-grid-container">
+                <div class="perfil">
+                    <!--bloque-->
+                    <article class="perfil__article">
+                        <h2 class="h2 perfil--h2">{{ data.labels.perfil }}</h2>
+                        <p class="p perfil--p">{{ data.info.perfil }}</p>
+                    </article>
+                </div>
+
+                <div class="profile-pic">
+                    <!--src in json-->
+                    <img class="profile-pic__img" :src="data.info.img" alt="foto de perfil">
+                </div>
+
+                <div class="social">
+                    <section class="social__info">
+                        <ul class="ul">
+                            <li class="ul__li ul__social">{{ data.info.contacto.ubicacion }}</li>
+                            <li class="ul__li ul__social">{{ data.info.contacto.correo }}</li>
+
+                            <li class="ul__li ul__social">
+                                <a class="ul__social-a" :href="data.info.urls.github" title="github" target="_blank" aria-label="github" rel="nofollow">{{ data.info.contacto.github }}</a>
+                            </li>
+
+                            <li class="ul__li ul__social"><a class="ul__social-a" :href="data.info.urls.celular" aria-label="phone" title="telefono" target="_blank" rel="nofollow">{{ data.info.contacto.celular }}</a></li>
+
+                            <li class="ul__li ul__social"><a class="ul__social-a" :href="data.info.urls.twitter" title="twitter" target="_blank" aria-label="twitter" rel="nofollow">{{ data.info.contacto.twitter }}</a>
+                            </li>
+
+                            <li class="ul__li ul__social"><a class="ul__social-a" :href="data.info.urls.linkedin" title="linkedin" target="_blank" aria-label="linkedin" rel="nofollow">{{ data.info.contacto.linkedin }}</a></li>
+                        </ul>
+
+                    </section>
+
+                    <section class="icons">
+                        <ul class="ul">
+                            <li class="ul__li ul__social-icons">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                            </li>
+                            <li class="ul__li ul__social-icons">
+
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </li>
+                            <li class="ul__li ul__social-icons">
+                                <i class=" ul__icons-a fa fa-github" aria-hidden="true"></i>
+                            </li>
+                            <li class="ul__li ul__social-icons">
+                                <i class="ul__icons-a fa fa-phone" aria-hidden="true"></i>
+                            </li>
+                            <li class="ul__li ul__social-icons">
+                                <i class="ul__icons-a fa fa-twitter" aria-hidden="true"></i>
+                            </li>
+                            <li class="ul__li ul__social-icons">
+                                <i class="ul__icons-a fa fa-linkedin-square" aria-hidden="true"></i>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <!--SEGUNDO BLOQUE-->
+            <div class="second-grid-container">
+                <!--línea debajo de los titulos-->
+                <section class="educacion">
+                    <article>
+                        <div class="border-black">
+                            <h2>{{ data.labels.educacion }}</h2>
+                        </div>
+
+                        <p class="p educacion--p">{{ data.info.educacion.colegio }}
+                            <br> <br> {{ data.info.educacion.universidad }}</p>
+                    </article>
+                </section>
+
+                <section class="conocimientos">
+                    <article>
+                        <div class="border-pink">
+                            <h2>{{ data.labels.conocimientos }}</h2>
+                        </div>
+                        <ul class="ul" v-for="conoc in data.info.conocimientos" :key="conoc.item">
+                            <li class="ul__li ul--center">{{ conoc.item }}</li><br>
+                        </ul>
+                    </article>
+                </section>
+
+                <section class="habilidades">
+                    <article>
+                        <div class="border-black">
+                            <h2>{{ data.labels.habilidades }}</h2>
+                        </div>
+                        <ul class="ul" v-for="habil in data.info.habilidades" :key="habil.item">
+                            <li class="ul__li ul--center">{{ habil.item }}</li><br>
+                        </ul>
+                    </article>
+                </section>
+            </div>
+
+            <section class="actividades">
+                <div class="border-pink">
+                    <h2>{{ data.labels.actividades }}</h2>
+                </div>
+
+                <div class="third-grid-container">
+                    <article class="actividades-list">
+                        <ul class="ul" v-for="activ in data.info.actividades" :key="activ.item">
+                            <li class="ul__li ul--center">{{ activ.item }}</li><br>
+                        </ul>
+                    </article>
+
+                    <div class="contacto">
+
+                        <h1 class="contacto-title contacto--h1 h1">{{ data.labels.contacto }}</h1>
+
+                        <form class="contacto__form" :action="data.info.urls.enviarForm" method="POST">
+                            <label for="correo" class="contacto__field">
+                                    <span class="contacto__label-text">{{ data.labels.correo }}</span>
+                                    <input aria-label="email" class="contacto__text-message" type="email" form="email"
+                                        id="_replyto">
+                                </label>
+                            <label for="mensaje" class="contacto__field">
+                                    <span class="contacto__label-text">{{ data.labels.mensaje }}</span>
+                                    <input aria-label="mensaje" class="contacto__text-message" type="text" name="message">
+                                </label>
+                            <button class="contacto__button" type="submit">{{ data.labels.contacto }}</button>
+                        </form>
+                    </div>
+            </section>
+            </div>
+            <footer class="footer"></footer>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="dist/index_bundle.js"></script>
+
+</body>
+
+</html>
